@@ -4,11 +4,14 @@ body {
 }
 
 .container {
+    padding: 30px;
     border: 1px solid lime;
     overflow: hidden;
     position: relative;
-    height: 700px;
+    height: 640px;
 }
+
+/*Styling and animation magic*/
 
 .slider {
     padding: 20px;
@@ -19,10 +22,14 @@ body {
     position: absolute;
     left: 0;
 
-    -webkit-transition: -webkit-transform .6s ease;
-    -moz-transition: -moz-transform .6s ease;
-    -ms-transition: -ms-transform .6s ease;
-    transition: transform .6s ease;
+    /* Increase of decrease animation speed here:
+        e.g.,   faster: transition: transform .1s ease;
+                slower: transition: transform .9s ease; */
+
+    -webkit-transition: -webkit-transform .4s ease;
+    -moz-transition: -moz-transform .4s ease;
+    -ms-transition: -ms-transform .4s ease;
+    transition: transform .4s ease;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -48,11 +55,15 @@ body {
         height: 150px;
     }
 
+    /* Logo should animate slower than slider to maintain layout
+    Increase of decrease animation speed here:
+        e.g.,   faster: transition: transform .1s ease;
+                slower: transition: transform .9s ease; */
     .logo-slider {
-    -webkit-transition: -webkit-transform .9s ease;
-    -moz-transition: -moz-transform .9s ease;
-    -ms-transition: -ms-transform .9s ease;
-    transition: transform .9s ease;
+    -webkit-transition: -webkit-transform .6s ease;
+    -moz-transition: -moz-transform .6s ease;
+    -ms-transition: -ms-transform .6s ease;
+    transition: transform .6s ease;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -68,10 +79,10 @@ body {
     }
 
     .logoUp.opened {
-        -webkit-transform: translate(0, -300%);
-        -moz-transform: translate(0, -300%);
-        -ms-transform: translate(0, -300%);
-        transform: translate(0, -300%);
+        -webkit-transform: translate(0, -240%);
+        -moz-transform: translate(0, -240%);
+        -ms-transform: translate(0, -240%);
+        transform: translate(0, -240%);
     }
 
     .sliderDown.opened {
