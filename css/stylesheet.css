@@ -1,0 +1,82 @@
+body {
+    background: #eee;
+    margin: 50px;
+}
+
+.container {
+    border: 1px solid lime;
+    overflow: hidden;
+    position: relative;
+    height: 700px;
+}
+
+.slider {
+    padding: 20px;
+    background: pink;
+    border: 1px solid hotpink;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+
+    -webkit-transition: -webkit-transform .6s ease;
+    -moz-transition: -moz-transform .6s ease;
+    -ms-transition: -ms-transform .6s ease;
+    transition: transform .6s ease;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.sliderDown {
+    top: 350px;
+}
+
+.sliderUp {
+    top: 0;
+}
+
+.logoUp {
+    position: absolute;
+    left: 500px;
+    bottom: 270px;
+    }
+
+    .logoUp img {
+        height: 150px;
+    }
+
+    .logo-slider {
+    -webkit-transition: -webkit-transform .9s ease;
+    -moz-transition: -moz-transform .9s ease;
+    -ms-transition: -ms-transform .9s ease;
+    transition: transform .9s ease;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+
+    .sliderUp.opened {
+        -webkit-transform: translate(0, -100%);
+        -moz-transform: translate(0, -100%);
+        -ms-transform: translate(0, -100%);
+        transform: translate(0, -100%);
+    }
+
+    .logoUp.opened {
+        -webkit-transform: translate(0, -300%);
+        -moz-transform: translate(0, -300%);
+        -ms-transform: translate(0, -300%);
+        transform: translate(0, -300%);
+    }
+
+    .sliderDown.opened {
+        -webkit-transform: translate(0, 100%);
+        -moz-transform: translate(0, 100%);
+        -ms-transform: translate(0, 100%);
+        transform: translate(0, 100%);
+    }
